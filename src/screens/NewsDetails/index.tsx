@@ -1,16 +1,13 @@
-import {useNavigation} from '@react-navigation/native';
 import React, {useCallback} from 'react';
 import {
   Image,
   Linking,
   ScrollView,
   Text,
-  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
 import {SharedElement} from 'react-navigation-shared-element';
-import {Back} from '../../../assets';
 import styles from './styles';
 
 interface Route {
@@ -30,11 +27,6 @@ interface Route {
 export const NewsDetails: React.FC<{route: Route}> = ({route}) => {
 
   const {article, articleIndex} = route?.params;
-  const navigation = useNavigation();
-
-  const goBack = useCallback(() => {
-    navigation.goBack();
-  }, [navigation]);
 
   const backgroundColor = useColorScheme() === 'dark' ? '#000' : '#fff';
   const color = useColorScheme() === 'dark' ? '#fff' : '#000';
@@ -47,9 +39,6 @@ export const NewsDetails: React.FC<{route: Route}> = ({route}) => {
 
   return (
     <>
-      <TouchableOpacity style={styles.crossContainer} onPress={goBack}>
-        <Image style={styles.cross} source={Back} />
-      </TouchableOpacity>
       <ScrollView
         bounces={false}
         showsVerticalScrollIndicator={false}

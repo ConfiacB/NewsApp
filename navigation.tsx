@@ -10,9 +10,8 @@ export const RootNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Feed"
-        screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Feed" component={Feed} />
+        initialRouteName="Feed">
+        <Stack.Screen name="Feed" component={Feed} options={{headerShown: false}} />
         <Stack.Screen
           name="NewsDetails"
           component={NewsDetails}
@@ -23,6 +22,12 @@ export const RootNavigation = () => {
                   opacity: progress,
                 },
               };
+            },
+            title: "",
+            headerStyle: { backgroundColor: 'black' },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
             },
           }}
         />

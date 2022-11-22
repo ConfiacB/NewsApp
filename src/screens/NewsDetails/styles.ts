@@ -8,10 +8,12 @@ export default StyleSheet.create({
     paddingBottom: 120,
   },
   image: {
-    height: 500,
+    height: 300,
     width: '100%',
-    borderBottomLeftRadius: 50,
-    borderBottomRightRadius: 50,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
   },
   crossContainer: {
     position: 'absolute',
